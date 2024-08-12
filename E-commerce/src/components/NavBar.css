@@ -5,6 +5,11 @@
   /* padding: 15px 0; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   height: 80px; /* Adjusted height for better alignment */
+  position: fixed;
+  top: 0; /* Positions it at the top of the viewport */
+  left: 0; /* Aligns it to the left */
+  width: 100%;
+  z-index: 1000;
 }
 
 .container {
