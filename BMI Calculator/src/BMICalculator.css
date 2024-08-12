@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1d6da;
+    font-family: 'Georgia', serif;
+    background: url('./assets/classical-bg.jpg') no-repeat center center/cover;
+  }
+  
+  .bmi-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(0, 44, 57);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bmi-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin: 10px 0;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+  }
+  
+  .input-group input {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
+  .result h2, .result h3 {
+    margin: 10px 0;
+  }
+
+  .bmi-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  
