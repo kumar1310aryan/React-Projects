@@ -1,0 +1,65 @@
+/* src/index.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
+  background-color: #f4f4f4; /* Light gray background for the app */
+  color: #333; /* Default text color */
+  line-height: 1.6; /* Improve readability */
+}
+
+a {
+  text-decoration: none; /* Remove default underline from links */
+  color: inherit; /* Inherit color from parent elements */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points from lists */
+}
+
+.container {
+  max-width: 1200px; /* Max width for the main container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+/* Add some spacing for sections */
+section {
+  padding: 20px 0; /* Vertical padding for sections */
+}
+
+/* Add styles for buttons */
+button {
+  background-color: #ff9900; /* Amazon orange for buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68a00; /* Darker orange on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+      padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-links {
+      flex-direction: column; /* Stack links vertically on mobile */
+  }
+
+  .nav-links li {
+      margin: 10px 0; /* Add margin between stacked links */
+  }
+}
