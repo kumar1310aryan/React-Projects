@@ -1,0 +1,20 @@
+/* Button.css */
+.calculator-button {
+    font-size: 24px;
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    background-color: #044346f9; /* Orange */
+    border: none; /* No border */
+    padding: 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+
+  .calculator-operator{
+    background-color: rgb(38, 65, 87);
+  }
+  
+  .calculator-button:hover {
+    background-color: #ff5722; /* Darker on hover */
+  }
+  
