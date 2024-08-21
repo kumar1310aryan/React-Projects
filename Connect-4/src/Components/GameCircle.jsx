@@ -5,14 +5,19 @@ const onClick = (id) => {
   alert("clicked " + id);
 };
 
-const GameCircle = ({ id, children, backgroundColor }) => {
-  const style = {
-    backgroundColor: backgroundColor,
-  };
+const GameCircle = ({ id, children }) => {
   console.log(id);
   return (
     <>
-      <div className="gameCircle" onClick={() => onClick(id)} style={style}>
+      <div
+        className="gameCircle"
+        onClick={() => onClick(id)}
+        style={
+          id % 2 === 0
+            ? { backgroundColor: "blue" }
+            : { backgroundColor: "red" }
+        }
+      >
         {children}
       </div>
     </>
@@ -22,7 +27,6 @@ const GameCircle = ({ id, children, backgroundColor }) => {
 GameCircle.propTypes = {
   id: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
 };
 
 export default GameCircle;
