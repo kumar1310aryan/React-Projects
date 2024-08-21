@@ -10,6 +10,11 @@ const GameBoard = () => {
   const [gameBoard, setGameBoard] = useState(Array(16).fill(NO_PLAYER));
   const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
 
+  const initBoard = () => {
+    setCurrentPlayer(PLAYER_1);
+    setGameBoard(Array(16).fill(NO_PLAYER));
+  };
+
   const circleClicked = (id) => {
     if (gameBoard[id] === NO_PLAYER) {
       const newGameBoard = gameBoard.map((player, index) => {
