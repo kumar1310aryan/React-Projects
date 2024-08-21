@@ -1,30 +1,79 @@
+body {
+  background-color: #87ceeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.gameContainer {
+  background-color: #f5deb3;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.turnDisplay {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fffacd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
 .gameBoard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  padding: 20px;
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  top: 15%;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .gameCircle {
-  height: 100px;
-  width: 100px;
-  margin: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #ffebcd;
   border-radius: 50%;
-  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.player_0 {
-  background-color: white;
+.gameCircle:hover {
+  transform: scale(1.1);
 }
+
 .player_1 {
-  background-color: red;
+  background-color: rgba(253, 13, 161, 0.935);
 }
 
 .player_2 {
-  background-color: blue;
+  background-color: rgb(0, 140, 255);
+}
+
+.newGameButton {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newGameButton:hover {
+  background-color: #ff4500;
+}
+
+.newGameButton:disabled {
+  background-color: #ffb6c1;
+  cursor: not-allowed;
 }
