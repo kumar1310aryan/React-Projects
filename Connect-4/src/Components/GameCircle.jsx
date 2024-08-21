@@ -1,32 +1,20 @@
 import PropTypes from "prop-types";
 import "./Game.css";
 
-const onClick = (id) => {
-  alert("clicked " + id);
-};
-
-const GameCircle = ({ id, children }) => {
-  console.log(id);
+const GameCircle = ({ id, onCircleClicked }) => {
   return (
-    <>
-      <div
-        className="gameCircle"
-        onClick={() => onClick(id)}
-        style={
-          id % 2 === 0
-            ? { backgroundColor: "blue" }
-            : { backgroundColor: "red" }
-        }
-      >
-        {children}
-      </div>
-    </>
+    <div
+      className={`gameCircle ${id % 2 === 0 ? "odd" : "even"}`}
+      onClick={()=>onCircleClicked(id)}
+    >
+      {/* No text inside the circle */}
+    </div>
   );
 };
 
 GameCircle.propTypes = {
   id: PropTypes.number.isRequired,
-  children: PropTypes.node.isRequired,
+  onCircleClicked: PropTypes.func.isRequired,
 };
 
 export default GameCircle;
