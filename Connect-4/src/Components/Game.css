@@ -9,8 +9,8 @@ body {
 
 .gameContainer {
   background-color: #f5deb3;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 15px;
+  border-radius: 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -76,4 +76,54 @@ body {
 .newGameButton:disabled {
   background-color: #ffb6c1;
   cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gameBoard {
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 5px;
+  }
+
+  .gameCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .newGameButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .turnDisplay {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameBoard {
+    grid-template-columns: repeat(7, 40px);
+    grid-template-rows: repeat(6, 40px);
+    gap: 5px;
+  }
+
+  .gameCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .newGameButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .turnDisplay {
+    font-size: 16px;
+  }
+
+  .gameContainer {
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
