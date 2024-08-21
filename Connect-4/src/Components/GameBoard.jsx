@@ -1,15 +1,20 @@
 import GameCircle from "./GameCircle";
 
 const GameBoard = () => {
+  const style = {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gridTemplateRows: "1fr 1fr 1fr 1fr",
+    padding: 20,
+    width: "500px",
+    position: "absolute",
+    left: "50%",
+    marginLeft: "-250px",
+    top:"15%"
+  };
   return (
     <>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
-          gridTemplateRows: "1fr 1fr 1fr 1fr",
-        }}
-      >
+      <div style={style}>
         <GameCircle id={1} backgroundColor="red"></GameCircle>
         <GameCircle id={2} backgroundColor="blue"></GameCircle>
         <GameCircle id={3} backgroundColor="red"></GameCircle>

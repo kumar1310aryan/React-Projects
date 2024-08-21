@@ -5,20 +5,17 @@ const onClick = (id) => {
 };
 
 const GameCircle = ({ id, children, backgroundColor }) => {
+  const style = {
+    backgroundColor: backgroundColor,
+    height: 100,
+    width: 100,
+    margin: 10,
+    borderRadius: 50,
+  };
   console.log(id);
   return (
     <>
-      <div
-        className="circle"
-        onClick={() => onClick(id)}
-        style={{
-          backgroundColor: backgroundColor,
-          height: 100,
-          width: 100,
-          margin: 10,
-          borderRadius: 50,
-        }}
-      >
+      <div className="circle" onClick={() => onClick(id)} style={style}>
         {children}
       </div>
     </>
