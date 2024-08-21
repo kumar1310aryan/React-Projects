@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Game.css";
 
 const onClick = (id) => {
   alert("clicked " + id);
@@ -7,15 +8,11 @@ const onClick = (id) => {
 const GameCircle = ({ id, children, backgroundColor }) => {
   const style = {
     backgroundColor: backgroundColor,
-    height: 100,
-    width: 100,
-    margin: 10,
-    borderRadius: 50,
   };
   console.log(id);
   return (
     <>
-      <div className="circle" onClick={() => onClick(id)} style={style}>
+      <div className="gameCircle" onClick={() => onClick(id)} style={style}>
         {children}
       </div>
     </>
@@ -23,8 +20,8 @@ const GameCircle = ({ id, children, backgroundColor }) => {
 };
 
 GameCircle.propTypes = {
-  id: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
   backgroundColor: PropTypes.string.isRequired,
 };
 

@@ -1,41 +1,29 @@
 import GameCircle from "./GameCircle";
+import "./Game.css";
 
 const GameBoard = () => {
-  const style = {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr",
-    gridTemplateRows: "1fr 1fr 1fr 1fr",
-    padding: 20,
-    width: "500px",
-    position: "absolute",
-    left: "50%",
-    marginLeft: "-250px",
-    top:"15%"
-  };
   return (
-    <>
-      <div style={style}>
-        <GameCircle id={1} backgroundColor="red"></GameCircle>
-        <GameCircle id={2} backgroundColor="blue"></GameCircle>
-        <GameCircle id={3} backgroundColor="red"></GameCircle>
-        <GameCircle id={4} backgroundColor="blue"></GameCircle>
+    <div className="gameBoard">
+      <GameCircle key={1} id={1} backgroundColor="red" />
+      <GameCircle key={2} id={2} backgroundColor="blue" />
+      <GameCircle key={3} id={3} backgroundColor="red" />
+      <GameCircle key={4} id={4} backgroundColor="blue" />
 
-        <GameCircle id={5} backgroundColor="red"></GameCircle>
-        <GameCircle id={6} backgroundColor="blue"></GameCircle>
-        <GameCircle id={7} backgroundColor="red"></GameCircle>
-        <GameCircle id={8} backgroundColor="blue"></GameCircle>
+      <GameCircle key={5} id={5} backgroundColor="red" />
+      <GameCircle key={6} id={6} backgroundColor="blue" />
+      <GameCircle key={7} id={7} backgroundColor="red" />
+      <GameCircle key={8} id={8} backgroundColor="blue" />
 
-        <GameCircle id={9} backgroundColor="red"></GameCircle>
-        <GameCircle id={10} backgroundColor="blue"></GameCircle>
-        <GameCircle id={11} backgroundColor="red"></GameCircle>
-        <GameCircle id={12} backgroundColor="blue"></GameCircle>
+      <GameCircle key={9} id={9} backgroundColor="red" />
+      <GameCircle key={10} id={10} backgroundColor="blue" />
+      <GameCircle key={11} id={11} backgroundColor="red" />
+      <GameCircle key={12} id={12} backgroundColor="blue" />
 
-        <GameCircle id={13} backgroundColor="red"></GameCircle>
-        <GameCircle id={14} backgroundColor="blue"></GameCircle>
-        <GameCircle id={15} backgroundColor="red"></GameCircle>
-        <GameCircle id={16} backgroundColor="blue"></GameCircle>
-      </div>
-    </>
+      <GameCircle key={13} id={13} backgroundColor="red" />
+      <GameCircle key={14} id={14} backgroundColor="blue" />
+      <GameCircle key={15} id={15} backgroundColor="red" />
+      <GameCircle key={16} id={16} backgroundColor="blue" />
+    </div>
   );
 };
 
