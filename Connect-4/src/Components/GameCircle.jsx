@@ -3,10 +3,7 @@ import "./Game.css";
 
 const GameCircle = ({ id, onCircleClicked }) => {
   return (
-    <div
-      className={`gameCircle ${id % 2 === 0 ? "odd" : "even"}`}
-      onClick={()=>onCircleClicked(id)}
-    >
+    <div className={`gameCircle player_0`} onClick={() => onCircleClicked(id)}>
       {/* No text inside the circle */}
     </div>
   );
