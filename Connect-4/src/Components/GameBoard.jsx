@@ -2,38 +2,43 @@ import { useState } from "react";
 import GameCircle from "./GameCircle";
 import "./Game.css";
 
+const NO_PLAYER = 0;
+const PLAYER_1 = 1; // Red
+const PLAYER_2 = 2; // Blue
+
 const GameBoard = () => {
-  const [gameBoard, setGameBoard] = useState(Array(16).fill(0));
-  console.log(gameBoard);
+  const [gameBoard, setGameBoard] = useState(Array(16).fill(NO_PLAYER));
+  const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
 
   const circleClicked = (id) => {
-    console.log("circle Clicked: " + id);
-    gameBoard[id - 1] = id;
-    setGameBoard(gameBoard);
-    console.log(gameBoard);
+    if (gameBoard[id] === NO_PLAYER) {
+      const newGameBoard = gameBoard.map((player, index) => {
+        return index === id ? currentPlayer : player;
+      });
+
+      setGameBoard(newGameBoard);
+
+      setCurrentPlayer(currentPlayer === PLAYER_1 ? PLAYER_2 : PLAYER_1);
+    }
+  };
+
+  console.log(gameBoard);
+
+  const renderCircle = (id) => {
+    const className = `player_${gameBoard[id]}`;
+    return (
+      <GameCircle
+        key={id}
+        id={id}
+        className={className}
+        onCircleClicked={circleClicked}
+      />
+    );
   };
 
   return (
     <div className="gameBoard">
-      <GameCircle key={1} id={1} onCircleClicked={circleClicked} />
-      <GameCircle key={2} id={2} onCircleClicked={circleClicked} />
-      <GameCircle key={3} id={3} onCircleClicked={circleClicked} />
-      <GameCircle key={4} id={4} onCircleClicked={circleClicked} />
-
-      <GameCircle key={5} id={5} onCircleClicked={circleClicked} />
-      <GameCircle key={6} id={6} onCircleClicked={circleClicked} />
-      <GameCircle key={7} id={7} onCircleClicked={circleClicked} />
-      <GameCircle key={8} id={8} onCircleClicked={circleClicked} />
-
-      <GameCircle key={9} id={9} onCircleClicked={circleClicked} />
-      <GameCircle key={10} id={10} onCircleClicked={circleClicked} />
-      <GameCircle key={11} id={11} onCircleClicked={circleClicked} />
-      <GameCircle key={12} id={12} onCircleClicked={circleClicked} />
-
-      <GameCircle key={13} id={13} onCircleClicked={circleClicked} />
-      <GameCircle key={14} id={14} onCircleClicked={circleClicked} />
-      <GameCircle key={15} id={15} onCircleClicked={circleClicked} />
-      <GameCircle key={16} id={16} onCircleClicked={circleClicked} />
+      {Array.from({ length: 16 }, (_, id) => renderCircle(id))}
     </div>
   );
 };
