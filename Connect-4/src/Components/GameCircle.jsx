@@ -5,7 +5,6 @@ const onClick = (id) => {
 };
 
 const GameCircle = ({ id, children }) => {
-  debugger;
   console.log(id);
   return (
     <>
